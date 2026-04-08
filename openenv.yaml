@@ -1,0 +1,19 @@
+name: sqlshield-env
+
+environment:
+  entry_point: env:SQLEnv
+
+actions:
+  - allow
+  - block
+  - sanitize
+
+tasks:
+  - name: easy
+    description: Detect obvious SQL injection
+
+  - name: medium
+    description: Detect moderate SQL injection
+
+  - name: hard
+    description: Detect advanced SQL injection
