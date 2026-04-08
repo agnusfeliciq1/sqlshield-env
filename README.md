@@ -1,36 +1,32 @@
 # SQLShield: SQL Injection Defense Environment
 
-## 📌 Description
-SQLShield is an OpenEnv environment that simulates SQL injection attacks and trains AI agents to detect and prevent malicious queries.
+## Description
+SQLShield is an OpenEnv environment that simulates SQL injection attacks.
 
-## 🎯 Objective
-The agent must analyze SQL queries and decide whether to:
+## Objective
+The agent must:
 - allow
 - block
 - sanitize
 
-## 🧩 Tasks
-
+## Tasks
 ### Easy
-Detect obvious SQL injection (e.g., OR 1=1)
+Detect simple attacks
 
 ### Medium
-Detect moderate attacks (e.g., comments --)
+Detect moderate attacks
 
 ### Hard
-Detect advanced attacks (e.g., UNION queries)
+Detect advanced attacks
 
-## ⚙️ Action Space
+## Action Space
 - allow
 - block
 - sanitize
 
-## 📊 Reward System
-- Correct detection → +1.0
-- Partial handling → +0.8 / +0.5
-- Wrong action → -1.0
+## Reward
+- correct → +1.0
+- wrong → -1.0
 
-## 🚀 How to Run
-
-```bash
+## How to Run
 python inference.py
